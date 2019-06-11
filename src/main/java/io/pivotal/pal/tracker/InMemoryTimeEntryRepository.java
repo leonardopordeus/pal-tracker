@@ -6,8 +6,13 @@ import java.util.List;
 
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
-    HashMap<Long, TimeEntry> db = new HashMap<>();
-    private static long lastId = 0;
+    HashMap<Long, TimeEntry> db;
+    private static long lastId;
+
+    public InMemoryTimeEntryRepository() {
+        this.db = new HashMap<>();
+        this.lastId = 0;
+    }
 
     public TimeEntry create(TimeEntry timeEntry) {
         lastId = lastId+1;
