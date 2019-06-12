@@ -24,4 +24,5 @@ public class PalTrackerApplication {
     {
         return new JdbcTimeEntryRepository(dataSource);
     }
+
 }
